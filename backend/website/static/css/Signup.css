@@ -1,0 +1,153 @@
+@media(width > 1200px){
+    div.description{
+        height: 100vh;
+    }
+}
+/* div.description{
+    height: 100vh;
+    background-color:#F4F4F4;
+} */
+.contain_all{
+    background-color: #F4F4F4;
+}
+
+img.brand_img{
+    height: 80px;
+    text-align: start;
+}
+.right-side{
+    background-repeat: no-repeat;
+    background-blend-mode: normal;
+    background-position: center top;
+    background-size: 100% 100%;
+    }
+input.form-control, .form-group{
+    background-color: #E4E4E4;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px; /* Add border-radius property */
+    padding-block: 7px;
+    padding-inline: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    margin-top: 5px;
+    border: none;
+    outline: none;
+}
+/* .email-input {
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: transparent;
+    margin-top: 5px;
+    border-radius: 25px;
+    padding-left: 25px;
+} */
+
+/* FORMS INPUT START HERE */
+
+
+.new-here-text{
+    font-family: 'Poppins', sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 0;
+    text-shadow: 2px 2px 2px rgba(23, 122, 139, 0.8);
+}
+
+.signup-message{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    color: #FFFFFF;
+    line-height: 40px;
+    margin: 0;
+}
+
+.login_to-sign-in{
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-inline: 10%;
+/* margin-top: 15%;
+margin-left: 10%; */
+}
+
+/* div.login_to-sign-in{
+    background-image: url(src/signin_bg.png);
+} */
+
+
+/* .password-input {
+    padding: 10px;
+    background-color: #E4E4E4;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+
+.password-input {
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    margin-top: 5px;
+    border-radius: 25px;
+    padding-left: 25px;
+} */
+
+.custom-signup-button {
+    background-color: #EC5300;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 38px;
+    padding-inline: 60px;
+    padding-block: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: medium;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.custom-signup-button:hover {
+    background-color: #00565A;
+}
+
+.signup1-button {
+
+    left: 431px;
+    top: 709px;
+    z-index: 1; /* Adjust the z-index as needed */
+}
+
+.signup-button{
+    background-color: #08989F;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 38px;
+    padding-inline: 60px;
+    padding-block: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: medium;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+/* .login_to-sign-in{
+    background-image: url(src/login_bg.png);
+    object-fit: cover;
+    align-self: flex-end;
+    position: absolute;
+    height: 100%;
+    width: 40%;
+}  */

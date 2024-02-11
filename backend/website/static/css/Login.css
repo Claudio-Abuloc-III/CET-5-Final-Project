@@ -1,0 +1,136 @@
+/* START HERE */
+@media(width > 992px){
+    div.description{
+        height: 100vh;
+    }
+}
+img.brand_img{
+    height: 80px;
+    text-align: start;
+}
+
+.img-right{
+    background-repeat: no-repeat;
+    background-blend-mode: normal;
+    background-position: center top;
+    background-size: 100% 100%;
+}
+
+.email-form {
+    padding: 10px;
+    background-color: #E4E4E4;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px; /* Add border-radius property */
+}
+
+.new-here-text{
+    font-family: 'Poppins', sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.signup-message{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    color: #FFFFFF;
+    line-height: 40px;
+    margin: 0;
+}
+
+input.form-control, .form-group{
+    background-color: #E4E4E4;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    padding-block: 7px;
+    padding-inline: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    margin-top: 5px;
+    border: none;
+    outline: none;
+}
+
+.email-input {
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: transparent;
+    margin-top: 5px;
+    border-radius: 25px; 
+    padding-left: 25px; 
+}
+
+.password-form {
+    padding: 10px;
+    background-color: #E4E4E4;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    margin-top: 10px;
+}
+
+.password-input {
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: transparent;
+    margin-top: 5px;
+    border-radius: 25px;
+    padding-left: 25px;
+}
+
+.custom-login-button {
+    background-color: #00777F;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 38px;
+    padding-inline: 60px;
+    padding-block: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: medium;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+.custom-login-button:hover {
+    background-color: #00565A;
+}
+
+.signup1-button {
+
+    left: 431px;
+    top: 709px;
+    z-index: 1;
+}
+
+.signup-button{
+    background-color: #EC5300;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 38px;
+    padding-inline: 60px;
+    padding-block: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: medium;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+h1.new-here-text{
+    font-size: clamp(20px, 10vw, 80px);
+}
+
+p.signup-message{
+    font-size: clamp(1rem, 1.5vw, 3rem);
+}

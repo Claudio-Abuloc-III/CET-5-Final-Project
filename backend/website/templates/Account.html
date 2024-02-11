@@ -1,0 +1,187 @@
+{% extends "base.html" %} {% block title %}User{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcycle - Activity</title>
+    <link rel="stylesheet" href="/css/Account.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
+    <link rel="shortcut icon" href="/src/img//Logo/NGOlogo.png" type="image/x-icon">
+
+</head>
+
+<body style="background-color: #F4F4F4;">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+{% block content %}
+<!-- PROFILE -->
+<section class="banner profile-cover p-5" style="background-image: url(static/images/background/account-var5.jpg);">
+    <div class="container">
+        <div class="profile d-flex justify-content-center">
+            <div class="row col-xl-8 col-lg-8 col-11 profile py-5 px-3 rounded-4 shadow-sm align-items-center" style="background-color: white;">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-4 col-md-2 d-flex my-3 justify-content-center align-items-center">
+                        <img class="account-profile-img" src="{{ url_for('static', filename='images/img/profileimg-placeholder.jpg')}}" alt="">
+                    </div>
+                    <div class="col-6">
+                        <div class="row align-items-center">
+                            <p class="username h4" style="margin-left: 10px;">{{current_user.username}}</p>
+                        </div>
+                        
+                        <p class="date-joined"> Joined {{ current_user.date.strftime('%B %d, %Y') }}</p>
+                        <p class="signature">This will be my signature ^^!
+                            Nice to meet you~</p>
+                    </div>
+                </div>
+                <hr>
+                <h5>User Activity</h5>
+                <div class="col mt-2">
+                    <div class="row text-center">
+                        <div class="col like-num">
+                            <p class="h1">0</p>
+                            <p class="h6">Liked Post</p>
+                        </div>
+                        
+                        <div class="col read-num">
+                            <p class="h1">{{ current_user.posts|length }}</p>
+                            <p class="h6">Created Post</p>
+                            
+                        </div>
+                        <div class="col create-num">
+                            <p class="h1">{{ current_user.discussions|length }}</p>
+                            <p class="h6">Created Discussion</p>
+                            
+                        </div>
+                    </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+<div class="container contain-all">
+    <!-- HISTORY -->
+    <div class="article container" style="background-color: white; margin-top: 2%; padding: 3%; margin-bottom: 2%;">
+        <div class="row justify-content-center">
+            <p class="label h1">History</p>
+            <hr>
+            <div class="row history">
+                {% if current_user.posts|length > 0 %}
+                {% for post in current_user.posts %}
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-6 g-3">
+                        <div class="card history">
+                            <img src="{{ url_for('static', filename='images/img/card-placeholder.png')}}" class="card-img-top" alt="...">
+                            <div class="card-body history">
+                                <p class="card-text category">How to recycle {{ post.category }}</p>
+                                <h5 class="card-title history">{{ post.title }}</h5>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                {% else %}
+                    {# Display a message if the user has no posts #}
+                    <p>No posts yet.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+<!-- FAVORITE -->
+<div class="article container" style="background-color: white; margin-top: 2%; padding: 3%; margin-bottom: 2%;">
+    <div class="row justify-content-center">
+        <p class="label h1">Favorite</p>
+        <hr>
+        <div class="row favorite">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-6 g-3">
+                <div class="card favorite">
+                    <img src="{{ url_for('static', filename='images/img/card-placeholder.png')}}" class="card-img-top" alt="...">
+                    <div class="card-body favorite">
+                    <p class="card-text category">How to recycle 'Category'</p>
+                    <h5 class="card-title favorite">TITLE PLACEHOLDER</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Discussion -->
+<div class="discussion container" style="background-color: white; margin-top: 2%; padding: 3%; margin-bottom: 2%;">
+    <div class="row justify-content-center">
+        <p class="label h1">Discussion</p>
+        <hr>
+        <div class="row topic">
+            {% if current_user.discussions|length > 0 %}
+                {% for discussion in current_user.discussions %}
+                    <div class="card topic mb-3">
+                        <div class="row my-3 mx-2">
+                            <div class="col">
+                                <!-- Link to discussion page -->
+                                <a href="{{ url_for('views.forumPost', discussion_id=discussion.id) }}">
+                                    <h4 class="card-title topic" style="margin-top: 10px;">{{ discussion.dTitle }}</h4>
+                                </a>
+                            </div>
+                            <div class="col" style="margin-top: 5px;">
+                                <p class="author">
+                                    by: {{ current_user.username }}
+                                </p>
+                                <p class="date-time">
+                                    {{ discussion.date.strftime('%B %d, %Y %I:%M %p') }}
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="comment">
+                                    30 comments
+                                </p>
+                                <p class="like">
+                                    {{ discussion.likes }} likes
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No discussions yet.</p>
+            {% endif %}
+        </div>
+    </div>   
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer pt-5 pb-2 position-relative">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-6 col-xl-6 text-center text-md-start mx-auto mt-3">
+                <p class="h4 brand">Upcycle</p>
+                <p class="description">This website combines insightful articles on ways to reuse recyclable materials with engaging forums for a community of recyclers, all in one place. Explore to stay informed and join forums to connect!</p>
+            </div>
+            <div class="col-md-4 col-lg-4 col-xl-4 text-center text-md-start mx-auto mt-3">
+                <p class="h4 link">Link</p>
+                <ul class="footer-links">
+                    <li><a class="footer" href="">About Us</a></li>
+                    <li><a class="footer" href="">Contact Us</a></li>
+                    <li><a class="footer" href="">Home</a></li>
+                    <li><a class="footer" href="">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="row text-center g-4">
+              <p class="copyright">© 2024 Upcycle</p>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock content %}
+
+</body>
+</html>

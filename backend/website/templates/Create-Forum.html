@@ -1,0 +1,101 @@
+{% extends "base.html" %} {% block title %}Create Discussion{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcycle - Forum</title>
+    <link rel="stylesheet" href="/css/Forum-Clicked.css">
+    <link rel="stylesheet" href="/css/Forum.css">
+    <script src="/js/Forum-Clicked.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body style="background-color: #F4F4F4;">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+{% block content %}
+<div class="mt-5"></div>
+<form method="POST" enctype="multipart/form-data">
+<!-- FORUM -->
+    <div class="container d-flex justify-content-center">
+        <div class="forum-content row justify-content-center" style="background-color: white;">
+            <div class="row justify-content-center">
+                <div class="forum" data-forum-id="7712">
+                <!-- TITLE -->
+                <!-- TITLE -->
+                    <div class="my-3">
+                        <label for="discussionTitle" class="form-label"><strong>Title*</strong></label>
+                        <textarea class="form-control" id="discussionTitle" name="discussionTitle" placeholder="Add title here" rows="1"></textarea>
+                    </div>
+                    <!-- IMG -->
+                    <!-- IMG --> 
+                    <!-- HTML code -->
+                    <div class="container d-flex align-items-center justify-content-center mb-3" id="imageContainer" style="background-color: rgb(223, 223, 223); height: 450px;">
+                        <div class="text-center">   
+                            <label class="text-center" for="pic">
+                                <p id="imagePreview" class="h1" style="font-family: 'Lato', sans-serif; font-weight: bold; font-size: 45px; color: #7E7E7E; margin-bottom: 20px;">
+                                [Display Image Here]
+                                </p>
+                                <span class="material-icons" style="font-size: 48px; margin-top: 20px; cursor: pointer; color: gray;">
+                                add_photo_alternate
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                    <input type="file" name="pic" id="pic" style="display: none;" onchange="previewImage()"/>
+
+                    <script>
+                        // JavaScript code
+                        function previewImage() {
+                            const fileInput = document.getElementById('pic');
+                            const imageContainer = document.getElementById('imageContainer');
+                            const addPhotoSpan = document.querySelector('.material-icons');
+
+                            const file = fileInput.files[0];
+                            const reader = new FileReader();
+
+                            reader.onload = function(e) {
+                                imageContainer.style.backgroundImage = `url('${e.target.result}')`;
+                                imageContainer.style.backgroundSize = 'cover'; // Make sure the image covers the container
+                                imageContainer.style.backgroundPosition = 'center'; // Center the image within the container
+                                imageContainer.style.backgroundRepeat = 'no-repeat'; // Prevent image repetition
+                                document.getElementById('imagePreview').textContent = ''; // Clear the existing text content
+                                
+                                // Hide the span element
+                                addPhotoSpan.style.display = 'none';
+                            }
+
+                            if (file) {
+                                reader.readAsDataURL(file); // Convert the selected file to a Data URL
+                            }
+                        }
+
+                    </script>
+                    
+                    <!-- DESCRIPTION -->
+                    <div class="col post-description">
+                        <div class="mb-3 mt-3">
+                            <label for="discussionDescription" class="form-label"><strong>Description:*</strong></label>
+                            <textarea class="form-control" id="discussionDescription" name="discussionDescription" placeholder="Add post description..." rows="5"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="container col-3 p-3">
+            <div class="row justify-content-center mx-5">
+                <button type="submit" class="btn text-white justify-content-center" style="background-color:#08989F;">Submit</button>
+            </div>
+        </div>
+</form>
+{% endblock content %}
+</body>
+</html>

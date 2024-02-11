@@ -1,0 +1,194 @@
+/* NAVBAR */
+.navbar{
+    background-color: #08989F;
+    height: 70px;
+}
+a.navbar-brand, h5.offcanvas-title{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+div.offcanvas-header{
+    padding: 10px;
+}
+@media(max-width: 1200px){
+    .sidebar.offcanvas{
+        background-color: rgba(38, 208, 188, 0.55);
+        backdrop-filter: blur(5px);
+    }
+    ul.dropdown-menu{
+        background-color: rgba(255, 255, 255, 0.692);
+        border: 0px;
+    }
+    a.dropdown-item{
+        font-family: 'Poppins';
+    }
+    li.navbar{
+        padding: 0px;
+        margin: 0px;
+    }
+}
+    .login.text-white{
+        border: 1px solid white;
+        border-radius: 5px;
+    }
+    .signup.text-white{
+        background-color: #EC5300;
+        border-radius: 5px;
+    }
+
+/* PROFILE */
+.profile-cover{
+    background-repeat: no-repeat;
+    background-blend-mode: normal;
+    background-position: center top;
+    background-size: 100% 100%;
+}
+p.username, p.date-joined, p.signature{
+    font-family: 'Poppins';
+}
+p.username{
+    font-weight: 600;
+    margin: 0px;
+    font-size: clamp(15px, 2vw, 30px);
+}
+.date-joined{
+    color: #9D9D9D;
+    font-size: clamp(8px, 2vw, 15px);
+}
+
+.signature{
+    color: #FF6B00;
+    font-size: clamp(10px, 2vw, 15px)
+}
+.like-num p.h1, .like-num p.h6{
+    color: #FF2458;
+}
+.read-num p.h1, .read-num p.h6{
+    color: #578E6D;
+}
+.create-num p.h1, .create-num p.h6{
+    color: #3855A1;
+}
+    /* USER ACTIVITY */
+    
+
+/* INSIDE CONTENT */
+hr{
+    height: 2px;
+    color: #878787;
+    background-color: #878787;
+}
+p.label{
+    font-family: 'Open Sans';
+}
+
+p.label.h1 {
+    font-family: 'Open Sans';
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    font-weight: 600;
+    color: black;
+}
+/* CARD TYPOGRAPHY */
+.card{
+    /* margin: 10px; */
+    margin: 0 auto;
+}
+p.card-text.category{
+    color: #909090;
+    font-size: clamp(12px, 1vw, 14px);
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+h5.card-title.history, h5.card-title.favorite{
+    font-family: 'Quicksand';
+    font-weight: bold;
+    font-size: clamp(20px, 1vw, 30px);
+}
+.card-img-top {
+    width:clamp(5rem, 10vw, 12rem) ;
+    height:clamp(9rem, 1vw, 10rem) ;
+    object-fit: cover;
+}
+.card-body.favorite, .card-body.history{
+    height:clamp(6rem, 1vw, 8rem);
+    padding-top: 10px;
+}
+
+/* FOR TOPIC CARDS */
+.card-title.topic{
+    color: #F06205;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: clamp(20px, 1.5vw, 30px);
+}
+
+.card-text.topic{
+    color: #828282;
+    font-weight: 500;
+    font-size: clamp(12px, 1vw, 14px);
+}
+
+p.author, p.date-time, p.comment, p.like {
+    font-size: clamp(12px, 1vw, 14px);
+    font-weight: 500;
+}
+
+/* div.container.contain-all{
+margin-top: 20%;
+} */
+
+/* FOOTER */
+footer.footer{
+    background-image: url(../images/background/footer.png);
+    background-repeat: no-repeat;
+    background-blend-mode: normal;
+    background-position: center top;
+    background-size: 100% 100%;
+    }
+    @media(max-width: 992px){
+        footer.footer{
+            background-color: #EC5300;
+        }
+    }
+    p.h4.brand{
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 700;
+        color: #fff;
+        margin: 0;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+    p.description, a.footer, p.copyright{
+        margin-top: 10px;
+        font-family: 'Poppins';
+        color: white;
+    }
+    p.h4.link{
+        font-family: 'Quicksand';
+        font-weight: 700;
+        color: #FFFFFF;
+        margin: 0;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    }
+    
+    ul.footer-links{
+        list-style-type: none;
+        color: #FFFFFF;
+        padding: 0px;
+    }
+    a.footer{
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    a.footer:hover{
+        color: #07f3ff;
+    }
+    p.copyright{
+        color: white;
+    }
+    .account-profile-img{
+        border-radius: 50%;
+    }

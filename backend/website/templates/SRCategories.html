@@ -1,0 +1,123 @@
+{% extends "base.html" %} {% block title %}Categories{% endblock %}
+{% block content %}
+<!-- CONTENT -->
+  <div class="col text-center m-3" >
+    <p class="select-material h1" style="color: #F06205;">Select a Material</p>
+  </div>
+
+  <div class="banner-bg section p-5 text-center d-flex flex-wrap align-items-center" style="background-color: #6D5959;">
+    <div class="container contain-card">
+          <div class="row g-4">
+            <!-- FIRST CARD STARTS HERE -->
+            <div class="col-xl-3 col-md-6 col-12">
+              <a href="/start-recycling-plastic" id="SRPlastic" style="text-decoration:none">
+                <div class="card plastic border-0" style="color: white;">
+                  <div class="card-header" style="background-color: #FF527C;">
+                    Plastic
+                  </div>
+                  <div class="card-body" style="background-color: #D24B6C;">
+                    <div class="row d-flex flex-wrap align-items-center">
+                      <div class="col-5">
+                        <img src="{{ url_for('static', filename='images/img/plastic-category.png')}}" alt="">
+                      </div>
+                      <div class="col-7 ">
+                        <ul>
+                          <li>PET</li>
+                          <li>PE-HD</li>
+                          <li>PVC</li>
+                          <li>PE-LD</li>
+                          <li>PP</li>
+                          <li>PS</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-xl-3 col-md-6 col-12">
+              <a href="/start-recycling-paper" id="SRPaper" style="text-decoration:none">
+                <div class="card paper border-0" style="color: white;">
+                  <div class="card-header" style="background-color: #77BC41;">
+                    Paper
+                  </div>
+                  <div class="card-body" style="background-color: #65A037;">
+                    <div class="row d-flex flex-wrap align-items-center">
+                      <div class="col-5">
+                        <img src="{{ url_for('static', filename='images/img/paper-category.png')}}" alt="">
+                      </div>
+                      <div class="col-7 ">
+                        <ul>
+                          <li>Newspaper</li>
+                          <li>Cardboard</li>
+                          <li>Magazines</li>
+                          <li>Catalogs</li>
+                          <li>Corrugated Cardboard</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            
+            <div class="col-xl-3 col-md-6 col-12">
+              <a href="/start-recycling-textile" id="SRTextile" style="text-decoration:none">
+                <div class="card textile border-0" style="color: white;">
+                  <div class="card-header" style="background-color: #FF9D2A;">
+                    Textile
+                  </div>
+                  <div class="card-body" style="background-color: #DF8924;">
+                    <div class="row d-flex flex-wrap align-items-center">
+                      <div class="col-5">
+                        <img src="{{ url_for('static', filename='images/img/textile-category.png')}}" alt="">
+                      </div>
+                      <div class="col-7 ">
+                        <ul>
+                          <li>Old clothes</li>
+                          <li>Sheet</li>
+                          <li>Towels</li>
+                          <li>Blanket</li>
+                          <li>Yarn</li>
+                          <li>Stuffed Toy</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-xl-3 col-md-6 col-12">
+              <a href="/start-recycling-glass" id="SRGlass" style="text-decoration:none">
+                <div class="card glass border-0" style="color: white;">
+                  <div class="card-header" style="background-color: #009BDE;">
+                    Glass
+                  </div>
+                  <div class="card-body" style="background-color: #0781B7;">
+                    <div class="row d-flex flex-wrap align-items-center">
+                      <div class="col-5">
+                        <img src="{{ url_for('static', filename='images/img/glass-category.png')}}" alt="">
+                      </div>
+                      <div class="col-7 ">
+                        <ul>
+                          <li>Glass Bottle</li>
+                          <li>Glass Tiles</li>
+                          <li>Light bulb</li>
+                          <li>Mirrors</li>
+                          <li>Pyrex Glass Container</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+  </div>
+{% endblock content %}
+
+
+

@@ -1,0 +1,325 @@
+{% extends "base.html" %} {% block title %}Homepage{% endblock %}
+
+{% block content %}
+
+<!-- BANNER SEARCH -->
+<div class="section pt-5 text-center d-flex justify-content-center" style="background-image: url(static/images/background/homepage.png);">
+    <div class="container" style="padding-bottom: 5rem; margin: 0px;">
+        <div>
+            <p class="h1 welcome ">Welcome to</p>
+            <p class="h1 brand">UPCYCLE!</p>
+            <p class="h1 start">Start recycling today</p>
+            <form class="d-flex justify-content-center px-5 pt-5" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn search" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- POPULAR POST -->
+<div class="article container" style="background-color: white; margin-top: 2%; padding: 3%;">
+    <div class="row justify-content-center">
+        <p class="label h1">Popular post:</p>
+        <hr>
+        <div class="row post">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-6 g-3">
+                <div class="card post"  onclick="redirectToMaterial('Post_page.html')">
+                    <img src="{{ url_for('static', filename='images/img/card-placeholder.png')}}" class="card-img-top" alt="...">
+                    <div class="card-body post">
+                    <p class="card-text category">How to recycle 'Category'</p>
+                    <h5 class="card-title post">TITLE PLACEHOLDER</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-6 g-3">
+                <div class="card post"  onclick="redirectToMaterial('Post_page.html')">
+                    <img src="{{ url_for('static', filename='images/img/card-placeholder.png')}}" class="card-img-top" alt="...">
+                    <div class="card-body post">
+                    <p class="card-text category">How to recycle 'Category'</p>
+                    <h5 class="card-title post">TITLE PLACEHOLDER</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-6 g-3">
+                <div class="card post"  onclick="redirectToMaterial('Post_page.html')">
+                    <img src="{{ url_for('static', filename='images/img/card-placeholder.png')}}" class="card-img-top" alt="...">
+                    <div class="card-body post">
+                    <p class="card-text category">How to recycle 'Category'</p>
+                    <h5 class="card-title post">TITLE PLACEHOLDER</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-6 g-3">
+                <div class="card post"  onclick="redirectToMaterial('Post_page.html')">
+                    <img src="{{ url_for('static', filename='images/img/card-placeholder.png')}}" class="card-img-top" alt="...">
+                    <div class="card-body post">
+                    <p class="card-text category">How to recycle 'Category'</p>
+                    <h5 class="card-title post">TITLE PLACEHOLDER</h5>
+                    </div>
+                </div>
+            </div>
+            <script src="connection.js"></script>
+            
+        </div>
+    </div>
+</div>
+
+<!-- RECENTLY POSTED -->
+<div class="article container" style="background-color: white; margin-top: 2%; padding: 3%; margin-bottom: 2%;">
+    <div class="row justify-content-center">
+        <p class="label h1">Recently Posted:</p>
+        <hr>
+        <div class="row post">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-6 g-3">
+                <div class="card post">
+                    <img src="{{ url_for('static', filename='images/img/card-placeholder.png')}}" class="card-img-top" alt="...">
+                    <div class="card-body post">
+                    <p class="card-text category">How to recycle 'Category'</p>
+                    <h5 class="card-title post">TITLE PLACEHOLDER</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-6 g-3">
+                <div class="card post">
+                    <img src="{{ url_for('static', filename='images/img/card-placeholder.png')}}" class="card-img-top" alt="...">
+                    <div class="card-body post">
+                    <p class="card-text category">How to recycle 'Category'</p>
+                    <h5 class="card-title post">TITLE PLACEHOLDER</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-6 g-3">
+                <div class="card post">
+                    <img src="{{ url_for('static', filename='images/img/card-placeholder.png')}}" class="card-img-top" alt="...">
+                    <div class="card-body post">
+                    <p class="card-text category">How to recycle 'Category'</p>
+                    <h5 class="card-title post">TITLE PLACEHOLDER</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-6 g-3">
+                <div class="card post">
+                    <img src="{{ url_for('static', filename='images/img/card-placeholder.png')}}" class="card-img-top" alt="...">
+                    <div class="card-body post">
+                    <p class="card-text category">How to recycle 'Category'</p>
+                    <h5 class="card-title post">TITLE PLACEHOLDER</h5>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+<!-- POPULAR DISCUSSION -->
+<div class="discussion container" style="background-color: white; margin-top: 2%; padding: 3%; margin-bottom: 2%;">
+    <div class="row justify-content-center">
+        <p class="label h1">Popular Discussion:</p>
+        <hr>
+        <div class="row topic">
+            <div class="card topic">
+                <div class="row my-3 mx-2 ">
+                    <div class="col">
+                        <h4 class="card-title topic">Hello!</h4>
+                        <p class="card-text topic">Glass Category</p>
+                    </div>
+                    <div class="col">
+                        <p class="author">
+                            by: 4Bids
+                        </p>
+
+                        <p class="date-time">
+                            June. 18, 2023 12:15 PM
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p class="comment">
+                            30 comments
+                        </p>
+                        <p class="like">
+                            100 likes
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="row topic">
+            <div class="card topic g-3">
+                <div class="row my-3 mx-2">
+                    <div class="col">
+                        <h4 class="card-title topic">Hello!</h4>
+                        <p class="card-text topic">Glass Category</p>
+                    </div>
+                    <div class="col">
+                        <p class="author">
+                            by: 4Bids
+                        </p>
+
+                        <p class="date-time">
+                            June. 18, 2023 12:15 PM
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p class="comment">
+                            30 comments
+                        </p>
+                        <p class="like">
+                            100 likes
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="row topic">
+            <div class="card topic g-3">
+                <div class="row my-3 mx-2">
+                    <div class="col">
+                        <h4 class="card-title topic">Hello!</h4>
+                        <p class="card-text topic">Glass Category</p>
+                    </div>
+                    <div class="col">
+                        <p class="author">
+                            by: 4Bids
+                        </p>
+
+                        <p class="date-time">
+                            June. 18, 2023 12:15 PM
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p class="comment">
+                            30 comments
+                        </p>
+                        <p class="like">
+                            100 likes
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>    
+</div>
+
+<!-- RECENTLY DISCUSSED -->
+<div class="discussion container" style="background-color: white; margin-top: 2%; padding: 3%; margin-bottom: 2%;">
+    <div class="row justify-content-center">
+        <p class="label h1">Recently Discussed:</p>
+        <hr>
+        <div class="row topic">
+            <div class="card topic">
+                <div class="row my-3 mx-2">
+                    <div class="col">
+                        <h4 class="card-title topic">Hello!</h4>
+                        <p class="card-text topic">Glass Category</p>
+                    </div>
+                    <div class="col">
+                        <p class="author">
+                            by: 4Bids
+                        </p>
+
+                        <p class="date-time">
+                            June. 18, 2023 12:15 PM
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p class="comment">
+                            30 comments
+                        </p>
+                        <p class="like">
+                            100 likes
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="row topic">
+            <div class="card topic g-3">
+                <div class="row my-3 mx-2">
+                    <div class="col">
+                        <h4 class="card-title topic">Hello!</h4>
+                        <p class="card-text topic">Glass Category</p>
+                    </div>
+                    <div class="col">
+                        <p class="author">
+                            by: 4Bids
+                        </p>
+
+                        <p class="date-time">
+                            June. 18, 2023 12:15 PM
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p class="comment">
+                            30 comments
+                        </p>
+                        <p class="like">
+                            100 likes
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="row topic">
+            <div class="card topic g-3">
+                <div class="row my-3 mx-2">
+                    <div class="col">
+                        <h4 class="card-title topic">Hello!</h4>
+                        <p class="card-text topic">Placeholder Category</p>
+                    </div>
+                    <div class="col">
+                        <p class="author">
+                            by: 4Bids
+                        </p>
+
+                        <p class="date-time">
+                            June. 18, 2023 12:15 PM
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p class="comment">
+                            30 comments
+                        </p>
+                        <p class="like">
+                            100 likes
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>    
+</div>
+
+<!-- FOOTER -->
+<footer class="footer pt-5 pb-2 position-relative">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-6 col-xl-6 text-center text-md-start mx-auto mt-3">
+                <p class="h4 brand">Upcycle</p>
+                <p class="description">This website combines insightful articles on ways to reuse recyclable materials with engaging forums for a community of recyclers, all in one place. Explore to stay informed and join forums to connect!</p>
+            </div>
+            <div class="col-md-4 col-lg-4 col-xl-4 text-center text-md-start mx-auto mt-3">
+                <p class="h4 link">Link</p>
+                <ul class="footer-links">
+                    <li><a class="footer" href="">About Us</a></li>
+                    <li><a class="footer" href="">Contact Us</a></li>
+                    <li><a class="footer" href="">Home</a></li>
+                    <li><a class="footer" href="">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="row text-center g-4">
+                <p class="copyright">© 2024 Upcycle</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+{% endblock content %}

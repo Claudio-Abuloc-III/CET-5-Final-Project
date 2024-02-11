@@ -1,0 +1,299 @@
+/* NAVBAR */
+.navbar{
+    background-color: #08989F;
+    height: 70px;
+}
+a.navbar-brand, h5.offcanvas-title{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+div.offcanvas-header{
+    padding: 10px;
+}
+@media(max-width: 1200px){
+    .sidebar.offcanvas{
+        background-color: rgba(38, 208, 188, 0.55);
+        backdrop-filter: blur(5px);
+    }
+    ul.dropdown-menu{
+        background-color: rgba(255, 255, 255, 0.692);
+        border: 0px;
+    }
+    a.dropdown-item{
+        font-family: 'Poppins';
+    }
+    li.navbar{
+        padding: 0px;
+        margin: 0px;
+    }
+}
+    .login.text-white{
+        border: 1px solid white;
+        border-radius: 5px;
+    }
+    .signup.text-white{
+        background-color: #EC5300;
+        border-radius: 5px;
+    }
+
+/* FOOTER */
+footer.footer{
+    background-image: url(../images/background/footer.png);
+    background-repeat: no-repeat;
+    background-blend-mode: normal;
+    background-position: center top;
+    background-size: 100% 100%;
+    }
+    @media(max-width: 992px){
+        footer.footer{
+            background-color: #EC5300;
+        }
+    }
+    p.h4.brand{
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 700;
+        color: #fff;
+        margin: 0;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+    p.description, a.footer, p.copyright{
+        margin-top: 10px;
+        font-family: 'Poppins';
+        color: white;
+    }
+    p.h4.link{
+        font-family: 'Quicksand';
+        font-weight: 700;
+        color: #FFFFFF;
+        margin: 0;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    }
+    
+    ul.footer-links{
+        list-style-type: none;
+        color: #FFFFFF;
+        padding: 0px;
+    }
+    a.footer{
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    a.footer:hover{
+        color: #07f3ff;
+    }
+    p.copyright{
+        color: white;
+    }
+
+/* BANNER SEARCH */
+.banner-bg-plastic{
+    background-repeat: no-repeat;
+    background-blend-mode: normal;
+    background-position: center top;
+    background-size: 100% 100%;
+}
+p.h1{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+    /* BANNER INFO */
+    div.banner-info.section{
+        color: white;
+    }
+p.h1.title{
+    font-size: clamp(20px, 10vw, 80px);
+}
+input.form-control{
+    width: 30rem;
+}
+
+button.btn.search{
+    width: 90px;
+    padding: 10px;
+    color: #fff;
+    background-color: #F06205;
+}
+
+.inside-orange-banner{
+    font-size: clamp(12px, 2vw, 20px);
+}
+
+.col-10.description{
+    padding-left: 150px;
+    padding-right: 150px;
+}
+.col-1.img-right, .col-1.img-left{
+    padding: 0px;
+}
+
+img.side-img{
+    height: 200px;
+}
+/* INSIDE CONTENT */
+hr{
+    height: 2px;
+    color: #878787;
+    background-color: #878787;
+}
+p.label{
+    font-family: 'Open Sans';
+}
+
+p.label.h1 {
+    font-family: 'Open Sans';
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    font-weight: 600;
+    color: black;
+}
+
+    /* FOR POST CARDS */
+    .card{
+        /* margin: 10px; */
+        margin: 0 auto;
+    }
+    p.card-text.category{
+        color: #909090;
+        font-size: clamp(12px, 1vw, 14px);
+        font-weight: 500;
+        margin-bottom: 0px;
+    }
+    h5.card-title.post{
+        font-family: 'Quicksand';
+        font-weight: bold;
+        font-size: clamp(20px, 1vw, 30px);
+    }
+    .card-img-top {
+        width:clamp(5rem, 10vw, 12rem) ;
+        height:clamp(9rem, 1vw, 10rem) ;
+        object-fit: cover;
+    }
+    .card-body.post{
+        height:clamp(6rem, 1vw, 8rem);
+        padding-top: 10px;
+    }
+
+
+#search-section form {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    height: 50px;
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, .13);
+}
+
+.form-control:active,
+.form-control:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+p.label.h1 {
+    font-family: 'Open Sans';
+    font-size: large;
+    color: black;
+}
+
+.card{
+    margin: 10px;
+}
+
+/* FOOTER */
+ul{
+    list-style-type: none;
+}
+
+
+/* BANNER SEARCH */
+p.h1.welcome, p.h1.brand, p.h1.start{
+    font-family: 'Quicksand', sans-serif; 
+}
+p.h1.welcome{
+    font-size: clamp(2rem, 3vw, 4rem);
+    color: white;
+    font-weight: bold;
+}
+p.h1.brand{
+    color: #F06205;
+    font-weight: bold;
+    font-size: clamp(5rem,7vw, 8rem);
+    text-shadow: 2px 1px 2px rgba(81, 81, 81, 0.8);
+}
+p.h1.start{
+    font-size: clamp(1.25rem, 1.5vw, 2rem);
+    color: white;
+}
+button.btn.search{
+    width: 90px;
+    padding: 10px;
+    color: #fff;
+    background-color: #F06205;
+}
+
+/* INSIDE CONTENT */
+hr{
+    height: 2px;
+    color: #878787;
+    background-color: #878787;
+}
+p.label{
+    font-family: 'Open Sans';
+}
+
+p.label.h1 {
+    font-family: 'Open Sans';
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    font-weight: 600;
+    color: black;
+}
+    /* FOR POST CARDS */
+    .card{
+        /* margin: 10px; */
+        margin: 0 auto;
+    }
+    p.card-text.category{
+        color: #909090;
+        font-size: clamp(12px, 1vw, 14px);
+        font-weight: 500;
+        margin-bottom: 0px;
+    }
+    h5.card-title.post{
+        font-family: 'Quicksand';
+        font-weight: bold;
+        font-size: clamp(20px, 1vw, 30px);
+    }
+    .card-img-top {
+        width:clamp(5rem, 10vw, 12rem) ;
+        height:clamp(9rem, 1vw, 10rem) ;
+        object-fit: cover;
+    }
+    .card-body.post{
+        height:clamp(6rem, 1vw, 8rem);
+        padding-top: 10px;
+    }
+
+    /* FOR TOPIC CARDS */
+    .card-title.topic{
+        color: #F06205;
+        font-family: 'Open Sans';
+        font-weight: bold;
+        font-size: clamp(20px, 1.5vw, 30px);
+    }
+
+    .card-text.topic{
+        color: #828282;
+        font-weight: 500;
+        font-size: clamp(12px, 1vw, 14px);
+    }
+
+    p.author, p.date-time, p.comment, p.like {
+        font-size: clamp(12px, 1vw, 14px);
+        font-weight: 500;
+    }

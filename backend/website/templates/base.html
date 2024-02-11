@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Homepage.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Account.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/SRCategories.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/SR-Plastic.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Post-page.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Forum-Clicked.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Forum.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+          crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" 
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;700;800&display=swap" 
+          rel="stylesheet">
+    <link rel="stylesheet" 
+          href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap">
+    <link rel="stylesheet" 
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
+    <link rel="shortcut icon" 
+          href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <title>Upcycle - {% block title %}Base{% endblock %}</title>
+</head>
+
+<body style="background-color: #F4F4F4;"> 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" 
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" 
+            crossorigin="anonymous"></script>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-dark navbar-expand-lg">
+    <div class="container">
+        <!-- LOGO & BRAND -->
+      <div class="d-flex flex-row align-items-center gap-2">
+        <img  src="{{ url_for('static', filename='images/upcycle-logo.png')}}" 
+              width="60" 
+              height="60" 
+              class="d-inline-block align-text-center">
+        <a  class="navbar-brand" 
+            href="/">Upcycle</a>
+      </div>
+        <!-- TOGGLE BTN -->
+      <button class="navbar-toggler shadow-none border-0" 
+              type="button" 
+              data-bs-toggle="offcanvas" 
+              data-bs-target="#offcanvasNavbar" 
+              aria-controls="offcanvasNavbar" 
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- SIDEBAR -->
+      <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"> 
+        
+        <!-- SIDEBAR - header -->
+        <div class="offcanvas-header text-white border-bottom">
+          <div class="d-flex flex-row align-items-center gap-2">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Upcycle</h5>
+          </div>
+          <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <!-- SIDEBAR - body -->
+        <div class="offcanvas-body d-flex flex-column flex-xl-row p-4">
+          <ul class="navbar-nav justify-content-center align-items-center flex-grow-1 pe-3 gap-1">
+            <li class="nav-item">
+                <!-- Navbar starts here -->
+                <!-- HOME -->
+              <a class="nav-link active " aria-current="page" id="home" href="/">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="start-recycling" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Start Recycling
+                </a>
+                <ul class="dropdown-menu">
+                  <!-- VIEW POST -->
+                  <li><a class="dropdown-item" id="SRCategories" href="/start-recycling-categories">View Post</a></li>
+                  <!-- CREATE POST -->
+                  <li><a class="dropdown-item" id="CreatePost" href="/create-post">Create New Post</a></li>
+                </ul>
+              </li>
+              <!-- RECENT POST -->
+            <li class="nav-item">
+              <a class="nav-link" id="post" href="/post">Recent Post</a>
+            </li>
+            <!-- FORUM -->
+            <li class="nav-item">
+                <a class="nav-link" id="forum" href="/forum">Community Forum</a>
+              </li>
+          </ul>
+          <!-- LOGIN & SIGN UP -->
+          <div class="d-flex justify-content-center flex-xl-row align-items-center gap-2">
+          {% if user.is_authenticated %}
+          <a href="/account" class="user" id="account"> 
+            <img class="profile-img mx-3" src="{{ url_for('static', filename='images/img/profileimg-placeholder.jpg')}}" style="height: 50px; width: 50px">
+          </a>
+          <a href="/logout" class="logout text-white text-decoration-none inner-border px-4 py-2" id="logout"> Logout</a>
+          {% else %}
+          <!-- add  target="blank" to 'a' tag to go to new tab -->
+            <a href="/login" class="login text-white text-decoration-none inner-border px-4 py-2" id="login"> Login</a>
+            <a href="/signup" class="signup text-white text-decoration-none px-4 py-2" id="sign_up">Sign Up</a>
+          {% endif %}
+            
+          </div>
+        </div>
+      </div>
+    </div>
+</nav>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages%}
+  {% for category, messages in messages %}
+
+  {% if category == 'error' %}
+  <div class="alert alert-danger alert-dismissible fade show" role="alert" style="margin: 0px;">
+    {{ messages }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% else %}
+  <div class="alert alert-success alert-dismissible fade show" role="alert" style="margin: 0px;">
+    {{ messages }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endif %}
+  {% endfor %}
+{% endif %}
+{% endwith %}
+
+<div class="container-fluid p-0">
+  {% block content %}
+
+  {% endblock content %}
+</div>
+
+
+<!-- FOOTER -->
+<!-- <footer class="footer pt-5 pb-2 position-relative">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6 col-lg-6 col-xl-6 text-center text-md-start mx-auto mt-3">
+              <p class="h4 brand">Upcycle</p>
+              <p class="description">This website combines insightful articles on ways to reuse recyclable materials with engaging forums for a community of recyclers, all in one place. Explore to stay informed and join forums to connect!</p>
+          </div>
+          <div class="col-md-4 col-lg-4 col-xl-4 text-center text-md-start mx-auto mt-3">
+              <p class="h4 link">Link</p>
+              <ul class="footer-links">
+                  <li><a class="footer" href="">About Us</a></li>
+                  <li><a class="footer" href="">Contact Us</a></li>
+                  <li><a class="footer" href="">Home</a></li>
+                  <li><a class="footer" href="">FAQ</a></li>
+              </ul>
+          </div>
+          <div class="row text-center g-4">
+            <p class="copyright">© 2024 Upcycle</p>
+          </div>
+      </div>
+  </div>
+</footer> -->
+
+</body>
+</html>

@@ -1,0 +1,242 @@
+/* NAVBAR */
+.navbar{
+    background-color: #08989F;
+    height: 70px;
+}
+a.navbar-brand, h5.offcanvas-title{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+div.offcanvas-header{
+    padding: 10px;
+}
+@media(max-width: 1200px){
+    .sidebar.offcanvas{
+        background-color: rgba(38, 208, 188, 0.55);
+        backdrop-filter: blur(5px);
+    }
+    ul.dropdown-menu{
+        background-color: rgba(255, 255, 255, 0.692);
+        border: 0px;
+    }
+    a.dropdown-item{
+        font-family: 'Poppins';
+    }
+    li.navbar{
+        padding: 0px;
+        margin: 0px;
+    }
+}
+    .login.text-white{
+        border: 1px solid white;
+        border-radius: 5px;
+    }
+    .signup.text-white{
+        background-color: #EC5300;
+        border-radius: 5px;
+    }
+
+/* FOOTER */
+footer.footer{
+    background-image: url(../images/background/footer.png);
+    background-repeat: no-repeat;
+    background-blend-mode: normal;
+    background-position: center top;
+    background-size: 100% 100%;
+    }
+    @media(max-width: 992px){
+        footer.footer{
+            background-color: #EC5300;
+        }
+    }
+    p.h4.brand{
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 700;
+        color: #fff;
+        margin: 0;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+    p.description, a.footer, p.copyright{
+        margin-top: 10px;
+        font-family: 'Poppins';
+        color: white;
+    }
+    p.h4.link{
+        font-family: 'Quicksand';
+        font-weight: 700;
+        color: #FFFFFF;
+        margin: 0;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    }
+    
+    ul.footer-links{
+        list-style-type: none;
+        color: #FFFFFF;
+        padding: 0px;
+    }
+    a.footer{
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    a.footer:hover{
+        color: #07f3ff;
+    }
+    p.copyright{
+        color: white;
+    }
+    
+/* WELCOME MESSAGE AND BUTTON*/
+p.h1.welcome, p.h1.brand, p.h5.message{
+    font-family: 'Quicksand', sans-serif; 
+}
+p.h1.welcome{
+    font-size: clamp(2.5rem, 4vw, 6rem);
+    color: white;
+    font-weight: bold;
+}
+p.h1.brand{
+    color: #F06205;
+    font-weight: bold;
+    font-size: clamp(5rem,10vw, 12rem);
+    text-shadow: 2px 1px 2px rgba(81, 81, 81, 0.8);
+}
+p.h5.message{
+    font-size: clamp(1.25rem, 2vw, 3rem);
+    color: white;
+}
+.signup-button{
+    background-color: #EC5300;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    padding-inline: 60px;
+    padding-block: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1px, 3vw, 25px);
+    font-weight: medium;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+/* CONTENT STARTING HERE */
+.col-md.content{
+    padding: 0px;
+}
+p.h1.main-title{
+    font-size: clamp(2rem,4vw, 12rem);
+    font-family: 'Poppins';
+    color: #00757E;
+    font-weight: bolder;
+}
+
+p.h5.sub-title{
+    font-family: 'Poppins';
+    font-size: clamp(1.25rem, 1vw, 3rem);
+    margin-inline: 20%;
+}
+
+button.btn.email{
+    width: 90px;
+    padding: 10px;
+    color: #fff;
+    background-color: #F06205;
+}
+input.form-control.me-2{
+    width: 600px;
+}
+
+.email-input {
+    padding-inline: 40%;
+    background-color: transparent;
+    border: 3px solid #000000;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 30px;
+    font-size: 30px;
+    align-items: center;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.signup2-btn {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    color: #fff;
+    border-radius: 30px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    border: none;
+    background-color: #00757E;
+    cursor: pointer;
+    z-index: 1;
+}
+
+div.banner-info.section{
+    color: white;
+}
+
+div.section.landing{
+    border-bottom: solid 5px#F06205;
+}
+
+a.nav-link{
+    color: white !important;
+    margin-inline: 20px;
+    font-family: 'Poppins';
+}
+
+button.btn.btn-login{
+    width: 90px;
+    color: #fff;
+    background-color: #F06205;
+}
+
+button.btn.btn-signup{
+    width: 120px;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+
+input.form-control{
+    width: 30rem;
+}
+
+#search-section form {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    height: 50px;
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, .13);
+}
+
+.outbox {
+    height: 500px;
+}
+
+.form-control:active,
+.form-control:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+p.label.h1 {
+    font-family: 'Open Sans';
+    font-size: large;
+    color: black;
+
+}
+
+.card{
+    margin: 10px;
+}
+
+h4.card-title{
+    font-family: 'Quicksand';
+    font-weight: bold;
+    color: #F06205;
+}

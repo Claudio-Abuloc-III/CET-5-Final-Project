@@ -1,0 +1,182 @@
+{% extends "base.html" %} {% block title %}Post{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Upcyle - How to Make a Vase out of a Plastic Bottle</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Post-page.css') }}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
+    <link rel="shortcut icon" href="/src/img/Logo/NGOlogo.png" type="image/x-icon">    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body  style="background-color: #F4F4F4;">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+{% block content %}
+<div class="div my-5"></div>
+<!-- POST INFO-->
+<div class="container post-info col-xl-8 col-xs-12 pb-4" style="background-color: white;">
+    <div class="row">
+        <div class="row">
+            <p class="recycle-text">RECYCLE &gt;&gt; PLASTIC</p>
+        </div>
+        <div class="row">
+            <p class="h4 post-title">How to Make a Vase out of a Plastic Bottle</p>
+        </div>
+        <div class="row">
+                <p class="author">Created by: <span class="author-name">username</span></p>
+        </div>
+        <div class="row">
+            <p class="created-on">Created on: <span class="date-time">username</span></p>
+        </div>
+
+        <div class="row g-3">
+            <div class="col post-description px-5">
+                <p ><strong>Description:</strong></p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, quidem explicabo qui laborum eius, aliquid mollitia quos officiis at ducimus dolorem perspiciatis. Saepe libero aperiam maiores eveniet rerum, voluptates a.</p>
+            </div>
+            <!-- <div class="col post-materials-needed rounded-3">
+                <div class="row p-2">
+                    <p><strong>You will need:</strong></p>
+                    <div class="col">
+                        <ul>
+                            <li><p>Sample 1</p></li>
+                            <li><p>Sample 2</p></li>
+                            <li><p>Sample 3</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+<!-- POST CONTENT -->
+<div class="container post-content col-xl-8 col-xs-12 mt-3">
+    <div class="row">
+        <div class="container post-instruction-title rounded-top text-white" style="background-color: #F06205;">
+            <div class="row px-3 py-2 d-flex align-items-center">
+                <div class="col-1 d-flex justify-content-center"><p class="h1" style="margin: 0;">•</p></div>
+                <div class="col"><p class="h3 instruction">Fold the Bottle into your Desired Design</p></div>
+            </div>
+        </div>
+        <div class="container py-4" style="background-color: white;">
+            <!-- IMG -->
+            <div class="row">
+                <div class="container d-flex justify-content-center" style="background-color: rgb(223, 223, 223); height: 450px;">
+                    <img class="forum-img" src="{{ url_for('static', filename='images/img/card-placeholder.png')}}" alt="">
+                </div>
+            </div>
+            <!-- IMG DESCRIPTION -->
+            <div class="row pt-2 px-4">
+                <p class="h6 message mt-3 mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum dolor possimus aspernatur error voluptas illo eius similique rem dolorem, est consectetur molestiae deserunt facilis at quidem ab ut fugit obcaecati!Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, in quod expedita suscipit incidunt cum, delectus hic eius eos, vitae dicta qui repudiandae ut ipsam aperiam similique. Harum, ab alias?</p>
+            </div>
+        </div>
+
+        <!-- ANOTHER UST COPY -->
+
+
+        </div>
+</div>
+
+
+
+<!-- REFERENCES -->
+<div class="container post-content col-xl-8 col-xs-12 mt-3" style="background-color: white;">
+    <div class="row p-3">
+        <p class="label h1">References</p>
+        <hr>
+        <div class="row">
+                <div class="col">
+                    <ul>
+                        <li><a href="">some link</a></li>
+                        <li><a href="">some link</a></li>
+                        <li><a href="">some link</a></li>
+                        <li><a href="">some link</a></li>
+                        <li><a href="">some link</a></li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+</div>
+
+<!-- YOU MIGHT LIKE -->
+<div class="container post-content col-xl-8 col-xs-12 mt-3" style="background-color: white;">
+    <div class="row p-3">
+        <p class="label h1">You might also Like:</p>
+        <hr>
+        <div class="row post">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-6 g-3">
+                <div class="card post" onclick="redirectToMaterial('Post_page.html')">
+                    <img src="{{ url_for('static', filename='images/img/card-placeholder.png')}}" class="card-img-top" alt="...">
+                    <div class="card-body post">
+                    <p class="card-text category">How to recycle 'Category'</p>
+                    <h5 class="card-title post">TITLE PLACEHOLDER</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-6 g-3">
+                <div class="card post" onclick="redirectToMaterial('Post_page.html')">
+                    <img src="{{ url_for('static', filename='images/img/card-placeholder.png')}}" class="card-img-top" alt="...">
+                    <div class="card-body post">
+                    <p class="card-text category">How to recycle 'Category'</p>
+                    <h5 class="card-title post">TITLE PLACEHOLDER</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-6 g-3">
+                <div class="card post" onclick="redirectToMaterial('Post_page.html')">
+                    <img src="{{ url_for('static', filename='images/img/card-placeholder.png')}}" class="card-img-top" alt="...">
+                    <div class="card-body post">
+                    <p class="card-text category">How to recycle 'Category'</p>
+                    <h5 class="card-title post">TITLE PLACEHOLDER</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-6 g-3">
+                <div class="card post" onclick="redirectToMaterial('Post_page.html')">
+                    <img src="{{ url_for('static', filename='images/img/card-placeholder.png')}}" class="card-img-top" alt="...">
+                    <div class="card-body post">
+                    <p class="card-text category">How to recycle 'Category'</p>
+                    <h5 class="card-title post">TITLE PLACEHOLDER</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="div my-5"></div>
+<!-- FOOTER -->
+<footer class="footer pt-5 pb-2 position-relative">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-6 col-xl-6 text-center text-md-start mx-auto mt-3">
+                <p class="h4 brand">Upcycle</p>
+                <p class="description">This website combines insightful articles on ways to reuse recyclable materials with engaging forums for a community of recyclers, all in one place. Explore to stay informed and join forums to connect!</p>
+            </div>
+            <div class="col-md-4 col-lg-4 col-xl-4 text-center text-md-start mx-auto mt-3">
+                <p class="h4 link">Link</p>
+                <ul class="footer-links">
+                    <li><a class="footer" href="">About Us</a></li>
+                    <li><a class="footer" href="">Contact Us</a></li>
+                    <li><a class="footer" href="">Home</a></li>
+                    <li><a class="footer" href="">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="row text-center g-4">
+                <p class="copyright">© 2024 Upcycle</p>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock content %}
+</body>    
+</html>
